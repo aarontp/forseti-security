@@ -159,14 +159,14 @@ resource "google_storage_default_object_access_control" "public_all_authenticate
   role               = "READER"
   entity             = "allAuthenticatedUsers"
 }
-
-provider "gsuite" {
-  version                 = "~> 0.1"
-  impersonated_user_email = var.gsuite_admin_email
-}
-
-resource "gsuite_group" "test-gsuite-group" {
-  email       = "gsuite-${random_pet.random_name_generator.id}@${var.domain}"
-  name        = "gsuite-${random_pet.random_name_generator.id}"
-  description = "G Suite Group Automated Creation Testing"
-}
+//
+//provider "gsuite" {
+//  version                 = "~> 0.1"
+//  impersonated_user_email = var.gsuite_admin_email
+//}
+//
+//resource "gsuite_group" "test-gsuite-group" {
+//  email       = "gsuite-${random_pet.random_name_generator.id}@${var.domain}"
+//  name        = "gsuite-${random_pet.random_name_generator.id}"
+//  description = "G Suite Group Automated Creation Testing"
+//}
